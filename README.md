@@ -119,10 +119,10 @@ The web interface allows users to:
 
 ## 👨‍💻 Author
 
-**Satheesh**
+**Dhanush**
 
 GitHub:  
-https://github.com/sathishasmi
+
 
 
 
