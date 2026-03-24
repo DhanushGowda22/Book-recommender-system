@@ -21,10 +21,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-model = pickle.load(open('artifacts/model.pkl','rb'))
-book_names = pickle.load(open('artifacts/book_names.pkl','rb'))
-final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
-book_pivot = pickle.load(open('artifacts/book_pivot.pkl','rb'))
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/model.pkl'), 'rb'))
+book_names = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/book_names.pkl'), 'rb'))
+final_rating = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/final_rating.pkl'), 'rb'))
+book_pivot = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/book_pivot.pkl'), 'rb'))
 
 def fetch_poster(suggestion):
 
