@@ -22,3 +22,6 @@ Thumbs.db
 
 # VS Code settings
 .vscode/
+
+#my environment
+myenv/
