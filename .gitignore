@@ -1,0 +1,29 @@
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+env/
+
+# Dataset files
+Data/
+
+# Model filesgit
+# artifacts/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+myenv/
+Data/
+artifacts/
+*.pkl
