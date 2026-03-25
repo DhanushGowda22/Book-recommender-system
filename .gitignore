@@ -23,5 +23,7 @@ Thumbs.db
 # VS Code settings
 .vscode/
 
-#my environment
 myenv/
+Data/
+artifacts/
+*.pkl
