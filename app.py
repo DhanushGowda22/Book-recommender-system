@@ -2,11 +2,10 @@ import pickle
 import streamlit as st
 import numpy as np
 import requests
+import os
 
-def fetch_poster(book_name):
-    url = f"http://www.omdbapi.com/?t={book_name}&apikey=YOUR_API_KEY"
-    data = requests.get(url).json()
-    return data.get('Poster', '')
+port = int(os.environ.get("PORT", 7860))
+
 st.markdown("""
 <style>
 img {
@@ -84,11 +83,24 @@ if st.button('Show Recommendation'):
 
     recommended_books, poster_url = recommend_book(selected_books)
 
-    for book in recommended_books:
-        st.write(book)
+cols = st.columns(5)
+
+for i in range(len(recommended_books)):
+    with cols[i]:
+        st.image(poster_url[i])
+        st.markdown(
+            f"<p style='text-align:center'>{recommended_books[i]}</p>",
+            unsafe_allow_html=True
+        )
 
 st.markdown("---")
 st.markdown(
     "<div style='text-align:center'>Built by <b>Dhanush</b> | Machine Learning Project </div>",
     unsafe_allow_html=True
 )
+if __name__ == "__main__":
+    import streamlit.web.cli as stcli
+    import sys
+
+    sys.argv = ["streamlit", "run", "app.py", "--server.port", str(port), "--server.address", "0.0.0.0"]
+    sys.exit(stcli.main())
