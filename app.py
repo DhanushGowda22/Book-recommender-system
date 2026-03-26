@@ -1,32 +1,29 @@
 import pickle
 import streamlit as st
 import numpy as np
-import requests
 import os
 
-port = int(os.environ.get("PORT", 7860))
-
+# ---------------- UI Styling ----------------
 st.markdown("""
 <style>
 img {
     border-radius: 12px;
     transition: transform 0.2s;
 }
-
 img:hover {
     transform: scale(1.08);
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown("<h1 style='text-align:center;'>Book Recommender System </h1>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align:center;'>Book Recommender System</h1>", unsafe_allow_html=True)
 st.write("")
 st.markdown(
     "<h2 style='text-align:center;'>This system recommends books using collaborative filtering based on user ratings.</h2>",
     unsafe_allow_html=True
 )
 
-import os
-
+# ---------------- Load Data ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 model = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/model.pkl'), 'rb'))
@@ -34,8 +31,8 @@ book_names = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/book_names.pkl')
 final_rating = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/final_rating.pkl'), 'rb'))
 book_pivot = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/book_pivot.pkl'), 'rb'))
 
+# ---------------- Functions ----------------
 def fetch_poster(suggestion):
-
     book_name = []
     ids_index = []
     poster_url = []
@@ -55,13 +52,12 @@ def fetch_poster(suggestion):
 
 
 def recommend_book(book_name):
-
     books_list = []
 
     book_id = np.where(book_pivot.index == book_name)[0][0]
 
     distance, suggestion = model.kneighbors(
-        book_pivot.iloc[book_id,:].values.reshape(1,-1),
+        book_pivot.iloc[book_id, :].values.reshape(1, -1),
         n_neighbors=6
     )
 
@@ -72,35 +68,31 @@ def recommend_book(book_name):
 
     return books_list, poster_url
 
-
+# ---------------- UI ----------------
 selected_books = st.selectbox(
     "Type or select a book from the dropdown",
     book_names
 )
 
+# ---------------- Recommendation ----------------
 if st.button('Show Recommendation'):
     st.subheader("Recommended Books")
 
     recommended_books, poster_url = recommend_book(selected_books)
 
-cols = st.columns(5)
+    cols = st.columns(5)
 
-for i in range(len(recommended_books)):
-    with cols[i]:
-        st.image(poster_url[i])
-        st.markdown(
-            f"<p style='text-align:center'>{recommended_books[i]}</p>",
-            unsafe_allow_html=True
-        )
+    for i in range(len(recommended_books)):
+        with cols[i]:
+            st.image(poster_url[i])
+            st.markdown(
+                f"<p style='text-align:center'>{recommended_books[i]}</p>",
+                unsafe_allow_html=True
+            )
 
+# ---------------- Footer ----------------
 st.markdown("---")
 st.markdown(
-    "<div style='text-align:center'>Built by <b>Dhanush</b> | Machine Learning Project </div>",
+    "<div style='text-align:center'>Built by <b>Dhanush</b> | Machine Learning Project</div>",
     unsafe_allow_html=True
 )
-if __name__ == "__main__":
-    import streamlit.web.cli as stcli
-    import sys
-
-    sys.argv = ["streamlit", "run", "app.py", "--server.port", str(port), "--server.address", "0.0.0.0"]
-    sys.exit(stcli.main())
