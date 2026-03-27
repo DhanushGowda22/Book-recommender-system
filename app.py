@@ -1,16 +1,13 @@
 import pickle
 import streamlit as st
 import numpy as np
-<<<<<<< HEAD
 
-=======
-import requests
 
 def fetch_poster(book_name):
     url = f"http://www.omdbapi.com/?t={book_name}&apikey=YOUR_API_KEY"
     data = requests.get(url).json()
     return data.get('Poster', '')
->>>>>>> 6915ab37f94ca252a83d84058ac56946e93c6042
+
 st.markdown("""
 <style>
 img {
@@ -85,7 +82,7 @@ selected_books = st.selectbox(
 
 if st.button('Show Recommendation'):
     st.subheader("Recommended Books")
-<<<<<<< HEAD
+
     recommended_books, poster_url = recommend_book(selected_books)
 
 cols = st.columns(5)
@@ -94,7 +91,7 @@ for i in range(5):
     with cols[i]:
         st.image(poster_url[i], use_container_width=True)
         st.markdown(f"<p style='text-align:center'>{recommended_books[i]}</p>", unsafe_allow_html=True)
-=======
+
 
     recommended_books, poster_url = recommend_book(selected_books)
 
@@ -107,7 +104,7 @@ for i in range(5):
                 f"<p style='text-align:center'>{recommended_books[i]}</p>",
                 unsafe_allow_html=True
             )
->>>>>>> 6915ab37f94ca252a83d84058ac56946e93c6042
+
 
 st.markdown("---")
 st.markdown(
