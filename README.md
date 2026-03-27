@@ -90,7 +90,7 @@ Book-Recommender-System-ML
 
 ### 1️⃣ Clone the repository
 
-### 2️⃣ Navigate to project folder
+### 2️⃣ Navigate to project folders
 
 ### 3️⃣ Install required libraries
 
