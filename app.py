@@ -79,7 +79,7 @@ if st.button('Show Recommendation'):
 
     for i in range(5):
         with cols[i]:
-            st.image(poster_url[i], use_container_width=True)
+            st.image(poster_url[i], width=150)
             st.markdown(f"<p style='text-align:center'>{recommended_books[i]}</p>", unsafe_allow_html=True)
 
 st.markdown("---")
