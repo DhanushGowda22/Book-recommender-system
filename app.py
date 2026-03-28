@@ -16,7 +16,7 @@ img:hover {
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown("<h1 style='text-align:center;'>Book Recommender System </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align:center;'>Readora by Dhanush 📚</h1>", unsafe_allow_html=True)
 st.write("")
 st.markdown(
     "<h2 style='text-align:center;'>This system recommends books using collaborative filtering based on user ratings.</h2>",
