@@ -16,7 +16,7 @@ The system uses **Collaborative Filtering** and **Cosine Similarity** to recomme
 
 ## 📸 App Screenshot
 
-*![App Screenshot]assets/App screenshot.png*
+*![App Screenshot](assets/App_screenshot.png)*
 
 ---
 
