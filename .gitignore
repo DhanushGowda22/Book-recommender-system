@@ -26,6 +26,5 @@ Thumbs.db
 myenv/
 Data/
 
-artifacts/
-*.pkl
+
 
