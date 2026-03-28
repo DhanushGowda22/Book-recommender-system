@@ -1,12 +1,8 @@
 import pickle
 import streamlit as st
 import numpy as np
-
-
-def fetch_poster(book_name):
-    url = f"http://www.omdbapi.com/?t={book_name}&apikey=YOUR_API_KEY"
-    data = requests.get(url).json()
-    return data.get('Poster', '')
+import os
+BASE_DIR = os.path.dirname(__file__)
 
 st.markdown("""
 <style>
@@ -26,11 +22,6 @@ st.markdown(
     "<h2 style='text-align:center;'>This system recommends books using collaborative filtering based on user ratings.</h2>",
     unsafe_allow_html=True
 )
-
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 model = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/model.pkl'), 'rb'))
 book_names = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/book_names.pkl'), 'rb'))
 final_rating = pickle.load(open(os.path.join(BASE_DIR, 'artifacts/final_rating.pkl'), 'rb'))
@@ -82,17 +73,6 @@ selected_books = st.selectbox(
 
 if st.button('Show Recommendation'):
     st.subheader("Recommended Books")
-
-    recommended_books, poster_url = recommend_book(selected_books)
-
-cols = st.columns(5)
-
-for i in range(5):
-    with cols[i]:
-        st.image(poster_url[i], use_container_width=True)
-        st.markdown(f"<p style='text-align:center'>{recommended_books[i]}</p>", unsafe_allow_html=True)
-
-
     recommended_books, poster_url = recommend_book(selected_books)
 
     cols = st.columns(5)
@@ -100,14 +80,10 @@ for i in range(5):
     for i in range(5):
         with cols[i]:
             st.image(poster_url[i], use_container_width=True)
-            st.markdown(
-                f"<p style='text-align:center'>{recommended_books[i]}</p>",
-                unsafe_allow_html=True
-            )
-
+            st.markdown(f"<p style='text-align:center'>{recommended_books[i]}</p>", unsafe_allow_html=True)
 
 st.markdown("---")
 st.markdown(
-    "<div style='text-align:center'>Built by <b>Dhanush</b> | Machine Learning Project </div>",
+    "<div style='text-align:center'>Built by <b>Satheesh</b> | Machine Learning Project </div>",
     unsafe_allow_html=True
 )
