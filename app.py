@@ -84,6 +84,6 @@ if st.button('Show Recommendation'):
 
 st.markdown("---")
 st.markdown(
-    "<div style='text-align:center'>Built by <b>Satheesh</b> | Machine Learning Project </div>",
+    "<div style='text-align:center'>Built by <b>Dhanush</b> | Machine Learning Project </div>",
     unsafe_allow_html=True
 )
