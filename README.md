@@ -8,6 +8,11 @@ The system uses **Collaborative Filtering** and **Cosine Similarity** to recomme
 
 ---
 
+## ✨ Features
+- 📚 Book recommendations using ML
+- ⚡ Fast Streamlit UI
+- 🖼️ Book cover display
+
 ## 🚀 Live Demo
 
 🔗 https://book-recommendationsystem-readanox.streamlit.app/
