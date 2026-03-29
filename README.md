@@ -9,9 +9,9 @@ The system uses **Collaborative Filtering** and **Cosine Similarity** to recomme
 ---
 
 ## ✨ Features
-- 📚 Book recommendations using ML
-- ⚡ Fast Streamlit UI
-- 🖼️ Book cover display
+- 📚 Smart book recommendations using ML
+- ⚡ Fast and interactive Streamlit UI
+- 🖼️ Displays book cover images
 
 ## 🚀 Live Demo
 
