@@ -1,6 +1,6 @@
 # 📚 Readora — Book Recommendation System
 
-## 📖 Project Description
+##  Project Description
 
 A Machine Learning-based **Book Recommendation System** that suggests books similar to the one selected by the user.
 
