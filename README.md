@@ -19,7 +19,7 @@ https://book-recommendationsystem-readanox.streamlit.app/
 
 ---
 
-## 📸 App Screenshot
+##  App Screenshot
 
 *![App Screenshot](assets/App_screenshot.png)*
 
