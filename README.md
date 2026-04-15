@@ -15,7 +15,7 @@ The system uses **Collaborative Filtering** and **Cosine Similarity** to recomme
 
 ##  Live Demo
 
-🔗 https://book-recommendationsystem-readanox.streamlit.app/
+https://book-recommendationsystem-readanox.streamlit.app/
 
 ---
 
