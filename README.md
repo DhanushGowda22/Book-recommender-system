@@ -29,7 +29,7 @@ https://book-recommendationsystem-readanox.streamlit.app/
 
 The dataset contains information about **books, users, and ratings**.
 
-📌 Dataset Source:
+ Dataset Source:
 https://www.kaggle.com/datasets/ra4u12/bookrecommendation
 
 ---
