@@ -25,7 +25,7 @@ https://book-recommendationsystem-readanox.streamlit.app/
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The dataset contains information about **books, users, and ratings**.
 
