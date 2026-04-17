@@ -45,7 +45,7 @@ https://www.kaggle.com/datasets/ra4u12/bookrecommendation
 
 ---
 
-## 🤖 Machine Learning Model
+## Machine Learning Model
 
 The recommendation system uses:
 
