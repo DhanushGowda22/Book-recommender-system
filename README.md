@@ -34,7 +34,7 @@ https://www.kaggle.com/datasets/ra4u12/bookrecommendation
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * Python
 * Pandas
