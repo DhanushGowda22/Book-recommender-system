@@ -54,7 +54,7 @@ to find books similar to the selected book.
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. Load book, user, and rating datasets
 2. Clean and preprocess the data
