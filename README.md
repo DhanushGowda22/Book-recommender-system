@@ -49,7 +49,7 @@ https://www.kaggle.com/datasets/ra4u12/bookrecommendation
 
 The recommendation system uses:
 
-👉 **Collaborative Filtering with K-Nearest Neighbors (KNN)**
+**Collaborative Filtering with K-Nearest Neighbors (KNN)**
 to find books similar to the selected book.
 
 ---
