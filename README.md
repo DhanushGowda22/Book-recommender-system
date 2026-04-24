@@ -65,7 +65,7 @@ to find books similar to the selected book.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 Book-Recommender-System
