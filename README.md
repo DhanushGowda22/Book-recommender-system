@@ -85,7 +85,7 @@ Book-Recommender-System
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
 ```bash
 git clone https://github.com/your-username/book-recommender-system.git
