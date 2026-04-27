@@ -97,7 +97,7 @@ streamlit run app.py
 
 ---
 
-## 🌐 Application Interface
+## Application Interface
 
 The web interface allows users to:
 
