@@ -107,7 +107,7 @@ The web interface allows users to:
 
 ---
 
-## 🚧 Future Improvements
+## Future Improvements
 
 * 🔮 Hybrid recommendation system
 * 🎨 Improved UI/UX
