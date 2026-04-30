@@ -102,7 +102,7 @@ streamlit run app.py
 The web interface allows users to:
 
 * Select a book
-* 🔍Get similar book recommendations
+* Get similar book recommendations
 * 🖼️ View book cover images
 
 ---
