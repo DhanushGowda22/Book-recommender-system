@@ -1,4 +1,4 @@
-# 📚 Readora — Book Recommendation System
+# 📚 Readanox — Book Recommendation System
 
 ## Project Description
 
