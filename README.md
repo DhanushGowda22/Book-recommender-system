@@ -111,7 +111,7 @@ The web interface allows users to:
 
 * Hybrid recommendation system
 * Improved UI/UX
-* 🔐User authentication system
+* User authentication system
 
 ---
 
