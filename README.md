@@ -115,7 +115,7 @@ The web interface allows users to:
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻Author
 
 **Dhanush**
 
