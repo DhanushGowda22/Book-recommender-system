@@ -110,7 +110,7 @@ The web interface allows users to:
 ## Future Improvements
 
 * Hybrid recommendation system
-* 🎨Improved UI/UX
+* Improved UI/UX
 * 🔐 User authentication system
 
 ---
