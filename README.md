@@ -123,6 +123,6 @@ The web interface allows users to:
 
 ---
 
-## ⭐ Support
+## ⭐Support
 
 If you found this project helpful, consider giving it a ⭐ on GitHub!
